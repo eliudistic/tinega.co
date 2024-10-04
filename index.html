@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinega.co - Corporate Showcase</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+        header img {
+            max-width: 180px;
+        }
+        header h1 {
+            font-size: 32px;
+            margin: 10px 0;
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+            border-bottom: 2px solid #000;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            padding: 10px;
+            transition: all 0.3s ease-in-out;
+        }
+        nav a:hover {
+            background-color: #222;
+            border-radius: 5px;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 70px 20px;
+            text-align: center;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+        }
+        h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333;
+        }
+        .business-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 30px;
+            margin-top: 30px;
+        }
+        .business-section img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .business-section img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Slideshow Styling */
+        .slideshow-container {
+            position: relative;
+            max-width: 800px;
+            margin: auto;
+        }
+        .slides {
+            display: none;
+        }
+        .active-slide {
+            display: block;
+        }
+        .slideshow-container img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        /* Founder & Sponsors Styling */
+        .founder, .sponsors {
+            background: #f7f7f7;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .sponsor-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .sponsor-logos img {
+            width: 150px;
+            opacity: 0.8;
+            transition: opacity 0.3s ease-in-out;
+        }
+        .sponsor-logos img:hover {
+            opacity: 1;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="tinega_logo.png" alt="Tinega.co Logo">
+    <h1>Welcome to Tinega.co</h1>
+    <p>Shaping the Future of Business</p>
+</header>
+
+<!-- Navigation -->
+<nav>
+    <a href="#filedocr">Filedocr.com</a>
+    <a href="#xubhaven">Xubhaven.com</a>
+    <a href="#procedureoes">Procedureoes.com</a>
+    <a href="#encyclopedai">EncyclopedAI.org</a>
+    <a href="#founder">Founder</a>
+    <a href="#sponsors">Sponsors</a>
+</nav>
+
+<!-- Filedocr Section -->
+<section id="filedocr">
+    <h2>Filedocr.com</h2>
+    <div class="slideshow-container">
+        <div class="slides active-slide">
+            <img src="filedocr_screenshot1.png" alt="Filedocr Screenshot 1">
+        </div>
+        <div class="slides">
+            <img src="filedocr_screenshot2.png" alt="Filedocr Screenshot 2">
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    <p>Filedocr.com helps manage your documents securely and efficiently.</p>
+</section>
+
+<!-- Xubhaven Section -->
+<section id="xubhaven">
+    <h2>Xubhaven.com</h2>
+    <div class="slideshow-container">
+        <div class="slides active-slide">
+            <img src="xubhaven_screenshot1.png" alt="Xubhaven Screenshot 1">
+        </div>
+        <div class="slides">
+            <img src="xubhaven_screenshot2.png" alt="Xubhaven Screenshot 2">
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    <p>Xubhaven.com is an innovative platform for business scalability.</p>
+</section>
+
+<!-- Procedureoes Section -->
+<section id="procedureoes">
+    <h2>Procedureoes.com</h2>
+    <div class="slideshow-container">
+        <div class="slides active-slide">
+            <img src="procedureoes_screenshot1.png" alt="Procedureoes Screenshot 1">
+        </div>
+        <div class="slides">
+            <img src="procedureoes_screenshot2.png" alt="Procedureoes Screenshot 2">
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    <p>Procedureoes.com helps streamline business procedures.</p>
+</section>
+
+<!-- EncyclopedAI Section -->
+<section id="encyclopedai">
+    <h2>EncyclopedAI.org</h2>
+    <div class="slideshow-container">
+        <div class="slides active-slide">
+            <img src="encyclopedai_screenshot1.png" alt="EncyclopedAI Screenshot 1">
+        </div>
+        <div class="slides">
+            <img src="encyclopedai_screenshot2.png" alt="EncyclopedAI Screenshot 2">
+        </div>
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+    </div>
+    <p>EncyclopedAI.org brings education to those in need using AI-driven technologies.</p>
+</section>
+
+<!-- Founder Section -->
+<section id="founder" class="founder">
+    <h2>Meet the Founder</h2>
+    <p>Discover the vision behind Tinega.co. Visit the founder's page at <a href="https://3liud.com" target="_blank">3liud.com</a>.</p>
+</section>
+
+<!-- Sponsors Section -->
+<section id="sponsors" class="sponsors">
+    <h2>Our Sponsors</h2>
+    <p>We are grateful for the support from our generous sponsors.</p>
+    <div class="sponsor-logos">
+        <img src="sponsor1.png" alt="Sponsor 1">
+        <img src="sponsor2.png" alt="Sponsor 2">
+        <img src="sponsor3.png" alt="Sponsor 3">
+        <img src="sponsor4.png" alt="Sponsor 4">
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Tinega.co - All Rights Reserved.</p>
+</footer>
+
+<!-- JavaScript for Slideshow -->
+<script>
+    let currentSlideIndex = 0;
+    showSlides(currentSlideIndex);
+
+    function changeSlide(n) {
+        currentSlideIndex += n;
+        showSlides(currentSlideIndex);
+    }
+
+    function showSlides(n) {
+        let slides = document.querySelectorAll('.slides');
+        if (n >= slides.length) {
+            currentSlideIndex = 0;
+        }
+        if (n < 0) {
+            currentSlideIndex = slides.length - 1;
+        }
+        slides.forEach(slide => slide.classList.remove('active-slide'));
+        slides[currentSlideIndex].classList.add('active-slide');
+    }
+</script>
+
+</body>
+</html>
